@@ -27,14 +27,14 @@ jobs:
       uses: hashicorp/setup-terraform@v1
       with:
            terraform_version: 1.0.1
-           terraform_wapper: false
+           terraform_wrapper: false
 
     - name: Terraform Init
       run: terraform init
 
     - name: Terraform Plan
-      run: terraform plan -input=false
+      run: terraform plan -no-color
 
     - name: Terraform Apply
-      run: terraform apply -auto-approve -input=false
+      run: terraform apply -auto-approve 
 
